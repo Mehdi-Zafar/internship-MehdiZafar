@@ -1,0 +1,162 @@
+*{
+    font-family: Roboto, sans-serif;
+    letter-spacing: 2px;
+}
+
+body{
+    background-image: linear-gradient(to right,rgba(43, 37, 37, 0.459),rgba(53, 36, 36, 0.486)),url("assets/background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav h1 a{
+    font-size: 1.5rem;
+    color: whitesmoke;
+    letter-spacing: 1.5px;
+    font-weight: 500;
+}
+
+nav h1 a:hover{
+    color: red;
+}
+
+nav h1 a span{
+    color: red;
+}
+
+nav ul{
+    display: flex;
+    margin-right: 20px;
+}
+
+nav ul li{
+    list-style-type: none;
+    margin-inline: 15px;
+    position: relative;
+}
+
+nav ul li a{
+    color: whitesmoke;
+    font-size: 1.2rem;
+    display: inline-block;
+    transition: 0.5s;
+    text-shadow: 0.3px 0.3px 2px whitesmoke;
+}
+
+nav ul li a:hover {
+    color: rgb(216, 20, 20);
+    transform: scale(1.1);
+    transition: 0.5s;
+    text-shadow: 0.3px 0.3px 2px rgb(216, 20, 20);
+  }
+
+nav ul li a:after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -2px;
+    width: 0px;
+    height: 2px;
+    background-color: rgb(216, 20, 20);
+    transition: all 0.45s;
+  }
+  
+nav ul li a:hover:after {
+    width: 100%;
+    left: 0;
+  }
+
+nav a{
+    text-decoration: none;
+}
+
+.form-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+}
+
+.form{
+    background-color: rgba(20, 17, 17, 0.801);
+    border-radius: 8px;
+    padding: 5px 15px;
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+    box-sizing: border-box;
+}
+
+.form h1{
+    color: mistyrose;
+    text-align: center;
+}
+
+.input-div{
+    position: relative;
+    width: 100%;
+}
+
+.inputBox{
+    width:100%;
+    padding-block: 10px;
+    padding-left: 5px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid mistyrose;
+    margin-block: 15px;
+    color: mistyrose;
+    font-size: large;
+    outline: none;
+}
+
+.form label{
+    position: absolute;
+    top: 25px;
+    left: 0;
+    color: rgb(114, 152, 255);
+    pointer-events: none;
+    transition: 0.5s;
+    font-size: large;
+    font-weight: bold;
+}
+
+.form label::after{
+    content: " *";
+}
+
+.inputBox:focus ~ label,
+.inputBox:valid ~ label{
+    top: 0px;
+    left: 0;
+    font-size: medium;
+    border: none;
+}
+
+input[type="submit"]{
+    background-color: transparent;
+    color: rgb(88, 128, 236);
+    font-size: 1rem;
+    padding: 8px 15px;
+    cursor: pointer;
+    border: 1px solid rgb(88, 128, 236);
+    border-radius: 7px;
+    margin: 15px;
+    transition: 0.3s;
+}
+
+input[type="submit"]:hover{
+    background-color: rgb(88, 128, 236);
+    color: white;
+    transition: 0.3s;
+}
