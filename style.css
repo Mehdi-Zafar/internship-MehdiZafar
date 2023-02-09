@@ -1,0 +1,491 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@300;400;500&display=swap');
+
+*{
+    font-family: 'Karla', sans-serif;
+    letter-spacing: 1.5px;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(43, 26, 26);
+    color: rgb(197, 175, 48);
+}
+
+header{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(36, 31, 31, 0.2),rgba(31, 18, 18, 0.5)),url("/assets/header-image.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    position: relative;
+}
+
+nav{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3px 0;
+}
+
+nav h1{
+    margin-left: 20px;
+}
+
+nav h1 a {
+    text-decoration: none;
+    color: rgb(197, 175, 48);
+}
+
+nav h1 a:hover{
+    text-shadow: 0.2px 0.2px 2px rgb(197, 175, 48);
+}
+
+nav ul{
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    margin-block: 0;
+}
+
+nav ul li{
+    list-style-type: none;
+    margin: 0;
+}
+
+nav ul li a{
+    color: rgb(197, 175, 48);
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 25px 15px;
+    display: inline-block;
+    margin: 0;
+    transition: 0.5s;
+    font-weight: 600;
+}
+
+nav ul li a:hover{
+    background-color: rgb(26, 21, 21);
+    transition: 0.5s;
+    transform: translateY(-5px);
+}
+
+.caption{
+    position: absolute;
+    top: 150px;
+    left: 70px;
+    font-size: 1.5rem;
+    padding: 5px 30px;
+    /* background-color: rgba(24, 20, 20, 0.6); */
+    border-radius: 10px;
+    text-align: center;
+    width: fit-content;
+}
+
+.caption h1,.caption p{
+    text-shadow: 0.3px 0.3px 3px rgb(197, 175, 48);
+}
+
+.caption a{
+    color: rgb(26, 21, 21);
+    text-decoration: none;
+    padding: 8px 20px;
+    border-radius: 2px;
+    font-weight: 500;
+    background-color: transparent;
+    color: rgb(197, 175, 48);
+    border: 1px solid rgb(197, 175, 48);
+    transition: 0.3s;
+}
+
+.caption a:hover{
+    background-color: rgb(197, 175, 48);
+    color: rgb(43, 26, 26);
+    border: 1px solid transparent;
+    transition: 0.3s;
+}
+
+.orderNow,.about,.contact{
+    margin: auto;
+    width: 100%;
+    line-height: 1.8rem;
+    background-color: rgb(197, 175, 48);
+    color: rgb(43, 26, 26);
+    border-radius: 10px;
+}
+
+.orderNow h1,.about h1,.contact h1{
+    text-align: center;
+}
+
+.cards {
+    margin: 40px 10px 0 10px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    position: relative;
+  }
+
+div.card {
+    border: 2px solid rgb(43, 26, 26);
+    margin: 10px;
+    border-radius: 7px;
+    width: 280px;
+    background-image: linear-gradient(to top,rgb(43, 26, 26),rgb(99, 86, 12));
+    overflow: hidden;
+    position: relative;
+    transition: 0.5s;
+    padding-bottom: 7px;
+  }
+
+  div.card:hover{
+    box-shadow: 3px 7px 15px rgb(43, 26, 26);
+    transform: translateY(-10px);
+    transition: 0.5s;
+  }
+
+  h4.desc{
+    position: absolute;
+    top: 50px;
+    width: 100%;
+    color: rgb(197, 175, 48);
+    padding: 10px 5px;
+    text-align: center;
+    z-index: -20;
+    font-size: 1.1rem;
+    background: linear-gradient(rgb(43, 26, 26,0.5), rgba(43, 26, 26,0.7));
+    max-height: 50px;
+    overflow: hidden;
+  }
+  
+  div.card:hover h4.desc{
+    z-index: 20;
+  }
+  
+  div.card h2,
+  div.card p {
+    text-align: center;
+  }
+  
+  div.card h2 {
+    font-size: 1.4rem;
+    color: rgb(197, 175, 48);
+    text-shadow: 0.3px 0.3px 1px rgb(197, 175, 48);
+  }
+  
+  div.card p {
+    color: rgb(197, 175, 48);
+    margin-bottom: 10px;
+    padding: 0;
+    font-weight: bold;
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  div.card img {
+    width: 100%;
+    height: 180px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    transition: all 1s;
+  }
+
+  div.card:hover img{
+    filter: blur(3px);
+  }
+  
+.view-item{
+    display: block;
+    transition: 0.5s;
+    background-color: transparent;
+    border: 1px solid rgb(197, 175, 48);
+    color: rgb(197, 175, 48);
+    font-size: 1.2rem;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    margin: 10px auto;
+    width: fit-content;
+}
+
+  .type {
+    position: absolute;
+    top: 0;
+    left: 5px;
+    background-color: rgb(43, 26, 26);
+    color:rgb(197, 175, 48);
+    border: 1px solid rgb(197, 175, 48);
+    padding: 5px 10px;
+    border-radius: 10px;
+  }
+  
+  button.addToCart{
+    width: 100%;
+    display: block;
+    margin: 20px auto 0px auto;
+    font-size: 1.2rem;
+    background-color: transparent;
+    color: coral;
+    padding: 15px 25px;
+    cursor: pointer;
+    font-weight: 600;
+    border: transparent;
+    /* border-top: 2px solid rgb(197, 175, 48); */
+    /* background-color: rgb(48, 29, 29); */
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius:7px ;
+    transition: 0.5s;
+    /* position: absolute; */
+    bottom: 0;
+  }
+
+  button.addToCart:hover{
+    background-color: rgb(197, 175, 48);
+    color: black;
+    transition: 0.5s;
+  }
+
+  div.btndiv {
+    width: 100%;
+    /* padding-block: 20px; */
+    /* background-color: coral; */
+    margin-top: 15px;
+    align-content: center;
+  }
+
+.about p{
+    margin-top: 30px;
+    margin-inline: auto;
+    font-size: 1.2rem;
+    padding: 0 15px;
+    text-align: justify;
+    font-weight: 600;
+    width: 80%;
+}
+
+.contact-info{
+   display: flex;
+   justify-content: space-evenly;
+}
+
+.contact-info div{
+    width: 30%;
+    text-align: center;
+}
+
+.contact-info a{
+    text-decoration: none;
+    color: rgb(43, 26, 26);
+}
+
+.upper{
+    background-color: rgb(43, 26, 26);
+}
+
+svg{
+    display: block;
+}
+
+.burger-icons{
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+}
+
+.burger-icons i{
+    margin:40px 15px 0 15px;
+    transition: 1s;
+}
+
+.burger-icons i:hover{
+    transform: rotate(359deg);
+    transition: 1s;
+}
+
+/* search.html */
+
+.search-bar{
+    background: transparent;
+    width: 300px;
+    border: none;
+    border-bottom: 1px solid rgb(197, 175, 48);
+    color: rgb(197, 175, 48);
+    font-size: 1.3rem;
+    padding: 5px;
+    margin: 3px 10px 0 0;
+    text-transform: capitalize;
+}
+
+.search-bar:focus{
+    outline: none;
+}
+
+.main-content{
+    background: rgb(197, 175, 48);
+    color: rgb(43, 26, 26);
+}
+
+main{
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.item-desc{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.item-desc .burger-pic{
+width: 550px;
+}
+
+.item-desc .burger-pic img{
+    width: 100%;
+    max-height: 430px;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+    box-shadow: 3px 3px 20px rgb(70, 64, 30);
+}
+
+.addtocart{
+    background-color: transparent;
+    border: 1px solid rgb(197, 175, 48);
+    color: rgb(197, 175, 48);
+    font-size: 1.2rem;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    margin: 10px 5px;
+}
+
+.addtocart:hover{
+    text-shadow: 0.2px 0.2px 2px rgb(197, 175, 48);
+    box-shadow: 0.1px 0.1px 2.5px rgb(197, 175, 48);
+}
+
+div.burger-info{
+    line-height: 1.6rem;
+    width: 45vw;
+}
+
+div.burger-info h2,div.burger-info h3{
+    width: 95%;
+}
+
+.ingredients-span{
+    background-color:rgb(197, 175, 48);
+    padding:4px 9px;
+    color:rgb(43, 26, 26);
+    border-radius:4px;
+    text-transform:capitalize;
+}
+
+.loading h2{
+    display:flex;
+    height:60vh;
+    justify-content:center;
+    align-items:center;
+}
+
+footer div h3{
+    text-align: center;
+    padding: 3px 0;
+}
+
+.social-icons{
+    display: flex;
+    justify-content: center;
+    font-size: 1.8rem;
+    padding: 5px 0;
+    margin-bottom: 5px;
+}
+
+.social-icons i{
+    margin-inline: 8px;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.social-icons i:hover{
+    transform: scale(1.2);
+    transition: .5s;
+}
+
+@media screen and (max-width:1250px){
+    .item-desc{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .item-desc .burger-pic{
+        width: 480px;
+    }
+    div.burger-info{
+        padding: 10px;
+        line-height: 2rem;
+        width: 90%;
+    }
+    div.burger-info h2,div.burger-info h3{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:950px){
+    .contact-info{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .contact-info div{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:700px) {
+    nav{
+        flex-direction: column;
+    }
+    nav ul{
+        display: none;
+    }
+    .caption{
+        font-size: 1.1rem;
+        top: 160px;
+        left: 30px;
+    }
+    .caption h1{
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width:500px){
+    .caption{
+        top: 120px;
+        left: 10px;
+    }
+    .search-bar{
+        width: 200px;
+    }
+    .item-desc .burger-pic{
+        width: 300px;
+    }
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BurgerLand | Item Detail</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/fbd1f415ae.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="itemSearch.js" defer></script>
+  </head>
+  <body>
+    <nav style="position: relative; background-color: rgb(43, 26, 26)">
+      <h1>
+        <a href="/index.html"
+          ><i class="fa-solid fa-burger"></i>&nbsp;Burger Land</a
+        >
+      </h1>
+      <div>
+        <ul>
+          <li>
+            <a href="/index.html#orderNow"
+              ><i class="fa-solid fa-utensils"></i>&nbsp;Order Now</a
+            >
+          </li>
+          <li>
+            <a href="/index.html#about"
+              ><i class="fa-solid fa-people-group"></i>&nbsp;About</a
+            >
+          </li>
+          <li>
+            <a href="/index.html#contact"
+              ><i class="fa-solid fa-phone"></i>&nbsp;Contact</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="loading">
+      <h2>Loading&nbsp;<i class="fa-solid fa-spinner"></i></h2>
+    </div>
+    <div class="item-desc">
+      <div class="burger-pic"></div>
+      <div class="burger-info">
+        <h2>
+          <i class="fa-solid fa-burger"></i> Name :
+          <span class="name"></span>
+        </h2>
+        <h3>
+          <i class="fa-solid fa-file-signature"></i> Description :
+          <span class="description"></span>
+        </h3>
+        <h3>
+          <i class="fa-solid fa-utensils"></i> Ingredients :
+          <span class="ingredients"></span>
+        </h3>
+        <h2>
+          <i class="fa-solid fa-tag"></i> Price :
+          <i class="fa-regular fa-dollar-sign"></i>
+          <span class="price"></span>
+        </h2>
+        <button class="addtocart">Add to Cart</button>
+        <a href="/search.html" class="addtocart"><nobr>Back to Search</nobr></a>
+      </div>
+    </div>
+    <footer>
+      <div>
+        <h3>&copy; Burger Land 2023. All Rights Reserved.</h3>
+      </div>
+      <div class="social-icons">
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-twitter"></i>
+        <i class="fa-brands fa-youtube"></i>
+      </div>
+    </footer>
+  </body>
+</html>
